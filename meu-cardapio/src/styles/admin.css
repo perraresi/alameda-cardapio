@@ -1,0 +1,622 @@
+.admin-page {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  background: radial-gradient(
+    circle at bottom,
+    #797979 0%,
+    #2b2b2b 35%,
+    #000000 100%
+  );
+}
+
+/* LOGIN */
+
+.admin-login-box {
+  width: 100%;
+  max-width: 420px;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 28px;
+
+  padding: 36px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.admin-logo {
+  width: 170px;
+
+  margin: 0 auto 10px;
+
+  object-fit: contain;
+}
+
+.admin-login-box h1 {
+  text-align: center;
+
+  color: white;
+
+  margin-bottom: 12px;
+
+  font-size: 32px;
+}
+
+.admin-login-box input {
+  height: 52px;
+
+  border: none;
+  border-radius: 14px;
+
+  padding: 0 16px;
+
+  font-size: 16px;
+
+  background-color: rgba(255, 255, 255, 0.08);
+
+  color: white;
+}
+
+.admin-login-box input::placeholder {
+  color: #cfcfcf;
+}
+
+.admin-login-box button {
+  height: 52px;
+
+  border: none;
+  border-radius: 14px;
+
+  background-color: white;
+  color: black;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.admin-login-box button:hover {
+  transform: scale(1.02);
+}
+
+/* PAINEL */
+
+.admin-painel {
+  width: 100%;
+  max-width: 1100px;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 28px;
+
+  padding: 32px;
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  margin-bottom: 28px;
+}
+
+.admin-header h1 {
+  color: white;
+  font-size: 36px;
+}
+
+.admin-header p {
+  color: #cfcfcf;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 12px;
+
+  margin-bottom: 24px;
+}
+
+.admin-btn {
+  padding: 12px 18px;
+
+  border: none;
+  border-radius: 12px;
+
+  background-color: white;
+  color: black;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.admin-btn:hover {
+  transform: scale(1.02);
+}
+
+.admin-btn.danger {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+/* LISTA */
+
+.admin-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-produto {
+  background-color: white;
+  color: #111;
+
+  border-radius: 16px;
+
+  padding: 16px;
+
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+
+  align-items: center;
+
+  gap: 16px;
+
+  transition: 0.2s ease;
+}
+
+.admin-produto:hover {
+  transform: translateY(-2px);
+}
+
+.admin-produto h3 {
+  margin-bottom: 4px;
+}
+
+.admin-produto p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* BOTÕES DO PRODUTO */
+
+.admin-botoes {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.editar-btn {
+  padding: 10px 14px;
+
+  border: none;
+  border-radius: 10px;
+
+  background-color: black;
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.editar-btn:hover {
+  transform: scale(1.03);
+}
+
+.status-btn {
+  padding: 10px 14px;
+
+  border: none;
+  border-radius: 10px;
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.status-btn:hover {
+  transform: scale(1.03);
+}
+
+.status-btn.ativo {
+  background-color: #25d366;
+}
+
+.status-btn.inativo {
+  background-color: #777;
+}
+
+/* MODAL */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background-color: rgba(0, 0, 0, 0.65);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  z-index: 999;
+
+  overflow-y: auto;
+}
+
+.modal-editar {
+  width: 100%;
+  max-width: 520px;
+
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+
+  background-color: white;
+
+  border-radius: 24px;
+
+  padding: 28px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+
+  animation: aparecerModal 0.2s ease;
+}
+
+.modal-editar h2 {
+  color: #111;
+
+  margin-bottom: 8px;
+}
+
+.modal-editar input,
+.modal-editar textarea,
+.modal-editar select {
+  width: 100%;
+
+  padding: 14px;
+
+  border-radius: 12px;
+  border: 1px solid #ccc;
+
+  font-size: 16px;
+
+  outline: none;
+}
+
+.modal-editar textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.modal-editar button {
+  min-height: 52px;
+
+  padding: 14px 18px;
+
+  border: none;
+  border-radius: 12px;
+
+  background-color: black;
+  color: white;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+
+  flex-shrink: 0;
+}
+
+.modal-editar button:last-child {
+  margin-top: -4px;
+}
+
+.modal-editar button:hover {
+  transform: scale(1.02);
+}
+
+.cancelar-btn {
+  background-color: #e4e4e4 !important;
+  color: black !important;
+}
+
+/* IMAGEM */
+
+.preview-img {
+  width: 100%;
+  max-height: 180px;
+
+  object-fit: cover;
+
+  border-radius: 16px;
+
+  margin-top: 8px;
+}
+
+.excluir-btn {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.excluir-btn:hover {
+  transform: scale(1.03);
+}
+
+.admin-filtros {
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  color: white;
+}
+
+.admin-filtros div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-filtros label {
+  font-weight: bold;
+}
+
+.admin-filtros select {
+  padding: 10px 14px;
+
+  border: none;
+  border-radius: 12px;
+
+  background-color: white;
+  color: black;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.admin-busca {
+  margin-bottom: 16px;
+}
+
+.admin-busca input {
+  width: 100%;
+  padding: 14px 16px;
+
+  border: none;
+  border-radius: 14px;
+
+  font-size: 16px;
+
+  background-color: white;
+  color: black;
+
+  outline: none;
+}
+
+.admin-busca input::placeholder {
+  color: #777;
+}
+
+.admin-logado {
+  margin-bottom: 20px;
+
+  color: #cfcfcf;
+
+  font-size: 15px;
+}
+
+.admin-logado strong {
+  color: white;
+}
+
+.modal-admins {
+  max-width: 720px;
+}
+
+.admins-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin-top: 12px;
+}
+
+.admin-item {
+  background-color: #f3f3f3;
+  color: #111;
+
+  border-radius: 14px;
+  padding: 14px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+.admin-item p {
+  color: #666;
+  margin-top: 4px;
+}
+
+.admin-item span {
+  display: inline-block;
+  margin-top: 6px;
+
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.desativar-admin-btn {
+  padding: 10px 14px;
+
+  border: none;
+  border-radius: 10px;
+
+  background-color: #ff4d4d;
+  color: white;
+
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.desativar-admin-btn:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.ativar-admin-btn {
+  padding: 10px 14px;
+
+  border: none;
+  border-radius: 10px;
+
+  background-color: #25d366;
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .admin-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+.admin-filtros {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.admin-filtros div {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.admin-filtros select {
+  width: 100%;
+}
+
+
+}
+
+/* ANIMAÇÃO */
+
+@keyframes aparecerModal {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .admin-page {
+    align-items: flex-start;
+  }
+
+  .admin-painel {
+    padding: 20px;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .admin-header h1 {
+    font-size: 28px;
+  }
+
+  .admin-actions {
+    flex-direction: column;
+  }
+
+  .admin-produto {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .admin-botoes {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .modal-editar {
+    padding: 20px;
+  }
+
+  .admin-logo {
+    width: 120px;
+  }
+
+  .modal-overlay {
+  align-items: flex-start;
+  padding: 12px;
+}
+
+.modal-editar {
+  max-height: calc(100vh - 24px);
+  padding: 18px;
+}
+
+.preview-img {
+  max-height: 140px;
+}
+}

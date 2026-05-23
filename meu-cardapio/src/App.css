@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: radial-gradient(
+    circle at bottom,
+    #797979 0%,
+    #2b2b2b 35%,
+    #000000 100%
+  );
+}
+
+a {
+  color: inherit;
+}
