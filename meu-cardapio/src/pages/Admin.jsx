@@ -747,6 +747,25 @@ async function ativarAdmin(admin) {
               }
             />
 
+            <select
+  value={produtoEditando.categoria}
+  onChange={(e) =>
+    setProdutoEditando({
+      ...produtoEditando,
+      categoria: e.target.value,
+    })
+  }
+>
+  {categorias.map((categoria) => (
+    <option
+      key={categoria.id}
+      value={categoria.nome}
+    >
+      {categoria.nome}
+    </option>
+  ))}
+</select>
+
             <textarea
               value={
                 produtoEditando.descricao
