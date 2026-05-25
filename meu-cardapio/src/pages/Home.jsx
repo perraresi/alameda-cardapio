@@ -61,7 +61,7 @@ function Home() {
       </div>
 
       <a
-        href="https://wa.me/5511951328226"
+        href="https://wa.me/5511981209657"
         className="whatsapp-button"
         target="_blank"
         rel="noopener noreferrer"
