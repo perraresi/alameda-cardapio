@@ -18,8 +18,7 @@ function Home() {
           <h2>Cardápio</h2>
 
           <p>
-            Confira nosso cardápio completo com bebidas,
-            porções e lanches.
+            Confira nosso cardápio completo!
           </p>
 
           <a href="/cardapio">
@@ -31,7 +30,7 @@ function Home() {
           <h2>Eventos</h2>
 
           <p>
-            Veja nossos próximos eventos e atrações.
+            Veja nossos próximos eventos e atrações!
           </p>
 
                     <a
@@ -47,7 +46,7 @@ function Home() {
           <h2>Instagram</h2>
 
           <p>
-            Acompanhe promoções e novidades no Instagram.
+            Acompanhe promoções e novidades no Instagram!
           </p>
 
           <a
