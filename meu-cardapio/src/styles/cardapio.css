@@ -147,13 +147,11 @@
 }
 
 .produto-info h2 {
-  font-size: 22px;
-  margin-bottom: 8px;
+  color: #111;
 }
 
 .produto-info p {
-  color: #666;
-  line-height: 1.4;
+  color: #555;
 }
 
 .produto-info strong {
@@ -192,6 +190,7 @@
 
 .produto-card {
   cursor: pointer;
+  background: #fff;
 }
 
 .produto-modal-overlay {
@@ -398,15 +397,23 @@
     flex: 1;
     padding: 14px;
     gap: 10px;
-  }
+  color: #111;
+}
 
-  .produto-info h2 {
-    font-size: 17px;
-  }
+.produto-info h2 {
+  color: #111;
 
-  .produto-info p {
-    font-size: 13px;
-  }
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  font-size: 1.1rem;
+}
+
+.produto-info p {
+  color: #555;
+
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
 
   .produto-info strong {
     font-size: 18px;
