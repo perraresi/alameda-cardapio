@@ -18,6 +18,8 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://alameda-cardapio.vercel.app",
+      "https://alamedakennedy.com.br",
+      "https://www.alamedakennedy.com.br",
     ],
   })
 );
